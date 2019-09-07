@@ -1,11 +1,13 @@
-import React from 'react';
-
-function App() {
-  return (
-    <div className="App">
-        hello world
-    </div>
-  );
+import React from 'react'
+import { Title, Wrapper } from './style'
+class App extends React.Component {
+  render() {
+    return (
+      <Wrapper>
+        <Title>Hello World!</Title>
+      </Wrapper>
+    )
+  }
 }
 
-export default App;
+export default App
