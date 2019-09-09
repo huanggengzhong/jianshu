@@ -1,13 +1,14 @@
 import React from 'react'
-import { Title, Wrapper } from './style'
+import Header from './common/header/index'
 class App extends React.Component {
   render() {
     return (
-      <Wrapper>
-        <Title>Hello World!</Title>
-      </Wrapper>
+   
+      <div>
+        <Header/>
+      </div>
     )
   }
 }
 
-export default App
+export default App;
