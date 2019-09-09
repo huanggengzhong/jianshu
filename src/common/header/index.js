@@ -8,6 +8,7 @@ import {
     Addition,
     Button
     } from './style'
+    
 class Header extends Component {
   render() {
     return (
@@ -17,10 +18,15 @@ class Header extends Component {
           <NavItem className='left'>首页</NavItem>
           <NavItem className='left'>下载App</NavItem>
           <NavItem className='right login'>登录</NavItem>
-          <NavItem className='right'>Aa</NavItem>
+          <NavItem className='right'>
+          <span className="iconfont iconAa"></span>
+          <span className="iconfont iconfangdajing"></span>
+          <span className="iconfont iconpan_icon"></span>
+          </NavItem>
           <NavSearch></NavSearch>
         </Nav>
         <Addition>
+        
             <Button className='writting'>写文章</Button>
             <Button className='reg'>注册</Button>
         </Addition>
