@@ -90,3 +90,23 @@ font-size:14px;
     background:#ec6149;
 }
 `
+export const SearchWrapper=styled.div`
+position:relative;
+float:left;
+height: 38px;
+.iconfont{
+    position:absolute;
+    height: 38px;
+    line-height:38px;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    width: 30px;
+    height: 30px!important;
+    line-height: normal!important;
+    padding: 0!important;
+    color: #969696!important;
+    text-align: center;
+
+}
+`
