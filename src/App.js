@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './common/header/index'
-import {Provider} from 'react-redux'
 import store from './store/index'
+import {Provider} from 'react-redux'
 class App extends React.Component {
   render() {
     return (

@@ -11,7 +11,12 @@ import {
   SearchWrapper
 } from './style'
 import { CSSTransition } from 'react-transition-group';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+
+// import  * as actionCreators from './store/actionCreators';
+import  {actionCreators} from './store';
+
+
 // class Header extends Component {
 //   // constructor(props){
 //   //   super(props)
@@ -109,25 +114,30 @@ function Header(props) {
 const mapStateToProps=(state)=>{
   //state就是仓库里所有的数据
 return {
- focused: state.focused
+//  focused: state.focused
+ focused: state.header.focused
 }
 }
 const mapDispathToProps=(dispatch)=>{
 return {
   handleInputFocus(){
-    const action ={
-      type:'search_focus'
-    }
-    dispatch(action)
+    // const action ={
+    //   type:'search_focus'
+    // }
+    // const action =actionCreators.searchFocus()
+    // dispatch(action)
+    // 上面两行简写
+    dispatch(actionCreators.searchFocus())
     
   },//记得这里是逗号哦
   handleInputBlur(){
     // console.log(321);//发现有效
-    const action={
-      type:'search_blur',
+    // const action={
+    //   type:'search_blur',
       
-    }
-    dispatch(action)
+    // }
+    // dispatch(action)
+    dispatch(actionCreators.searchBlur())
   }
 }
 }

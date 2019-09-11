@@ -1,16 +1,14 @@
-const defaultState={
-    focused:false
-}
-//记得要输出纯函数
-export default (state=defaultState,action)=>{
-    if(action.type==='search_focus'){
-        return {
-            focused:true
-        }
-    }else if(action.type==='search_blur'){
-        return {
-            focuse:false
-        }
-    }
-return state
-}
+import {combineReducers} from 'redux';//这个方法的作用是可以把小的reducer合并成大的reducer
+import {reducer as headerReducer} from '../common/header/store'
+// import headerReducer from '../common/header/store/reducer'
+
+
+// export default combineReducers({
+//     header:headerReducer
+// })
+// 上面三行简写
+
+const reducer =combineReducers({
+    header:headerReducer
+})
+export default reducer;
