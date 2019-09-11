@@ -7,10 +7,29 @@ import {
   NavSearch,
   Addition,
   Button,
-  SearchWrapper
+  SearchWrapper,
+ 
 } from './style'
-
+import { CSSTransition } from 'react-transition-group';
+import {connect} from 'react-redux'
 class Header extends Component {
+  // constructor(props){
+  //   super(props)
+  //   // this.state={
+  //   //   focused:false
+  //   // }
+  //   this.handleInputFocus=this.handleInputFocus.bind(this)
+  // }
+  // handleInputFocus(){
+  //   this.setState({
+  //     focused:true
+  //   })
+  // }
+  // handleInputBlur=()=>{
+  //   this.setState({
+  //     focused:false
+  //   })
+  // }
   render() {
     return (
       <HeaderWrapper>
@@ -21,19 +40,39 @@ class Header extends Component {
           <NavItem className="right login">登录</NavItem>
           <NavItem className="right">
             <span className="iconfont iconAa" />
-            <span className="iconfont iconpan_icon" />
           </NavItem>
           <SearchWrapper>
-            <NavSearch />
-            <span className="iconfont iconai219" />
+            <CSSTransition
+            timeout={200}
+            in={this.props.focused}
+            classNames='slide'
+            >
+            <NavSearch onFocus={this.handleInputFocus} onBlur={this.handleInputBlur}
+            className={
+              this.props.focused?'focused':''
+            }/>
+            </CSSTransition>
+            <span className={this.props.focused?'focused iconfont iconai219 ':'iconfont iconai219 '} />
           </SearchWrapper>
         </Nav>
         <Addition>
-          <Button className="writting">写文章</Button>
-          <Button className="reg">注册</Button>
+         
+            <span className="iconfont iconpan_icon" />
+            <Button className="writting">写文章</Button>
+           <Button className="reg">注册</Button>
         </Addition>
       </HeaderWrapper>
     )
   }
 }
-export default Header
+const mapStateToProps=(state)=>{
+  //state就是仓库里所有的数据
+return {
+ focused: state.focused
+}
+}
+const mapDispathToProps=(dispatch)=>{
+return {}
+}
+// 记住connect方法是下面这样写的
+export default connect(mapStateToProps,mapDispathToProps)(Header) 
