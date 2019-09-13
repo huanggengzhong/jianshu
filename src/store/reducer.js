@@ -1,4 +1,5 @@
-import {combineReducers} from 'redux';//这个方法的作用是可以把小的reducer合并成大的reducer
+// import {combineReducers} from 'redux';//这个方法的作用是可以把小的reducer合并成大的reducer
+import {combineReducers} from 'redux-immutable';
 import {reducer as headerReducer} from '../common/header/store'
 // import headerReducer from '../common/header/store/reducer'
 

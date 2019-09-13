@@ -8601,6 +8601,11 @@ redux-devtools-extension@^2.13.8:
   resolved "https://registry.npm.taobao.org/redux-devtools-extension/download/redux-devtools-extension-2.13.8.tgz#37b982688626e5e4993ff87220c9bbb7cd2d96e1"
   integrity sha1-N7mCaIYm5eSZP/hyIMm7t80tluE=
 
+redux-immutable@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npm.taobao.org/redux-immutable/download/redux-immutable-4.0.0.tgz#3a1a32df66366462b63691f0e1dc35e472bbc9f3"
+  integrity sha1-Ohoy32Y2ZGK2NpHw4dw15HK7yfM=
+
 redux@^4.0.4:
   version "4.0.4"
   resolved "https://registry.npm.taobao.org/redux/download/redux-4.0.4.tgz#4ee1aeb164b63d6a1bcc57ae4aa0b6e6fa7a3796"
