@@ -117,7 +117,10 @@ return {
 //  focused: state.focused
 //  focused: state.header.focused
 // 因为是immutable对象了,所以不能直接用state.header.出来
- focused: state.header.get('focused')//要用immutable对象的get方法来获取
+//  focused: state.header.get('focused')//要用immutable对象的get方法来获取
+//  focused: state.get('header').get('focused')//要用immutable对象的get方法来获取
+//  上一行简写
+focused:state.getIn(['header','focused'])
 }
 }
 const mapDispathToProps=(dispatch)=>{
